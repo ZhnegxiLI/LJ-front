@@ -1,0 +1,7 @@
+{
+    "APP_ID": "io.ionic.ljapp.func",
+    "APP_JPUSH_KEY": "d24d22b097a7ad44ac27f411",
+    "APP_CODEPUSH_IOS_KEY": "xx",
+    "APP_CODEPUSH_ANDROID_KEY": "xx",
+    "LABEL":"测试版"
+}

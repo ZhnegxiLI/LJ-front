@@ -1,0 +1,7 @@
+{
+    "APP_ID": "io.ionic.ljapp.prod",
+    "APP_JPUSH_KEY": "52ec65144069b66b1a924f18",
+    "APP_CODEPUSH_IOS_KEY": "30CgBVY96bysDo273UEu1HaYJKeNmFwkXn2iNj",
+    "APP_CODEPUSH_ANDROID_KEY": "LLkqLBGePjyvZlOP4ZDXb_P_TqLv04fpW9YTPT",
+    "LABEL":"正式版"
+}
