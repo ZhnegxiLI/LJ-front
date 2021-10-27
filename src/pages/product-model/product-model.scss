@@ -1,0 +1,23 @@
+page-product-model {
+    
+
+    #productSearchList{
+        width: 90%;
+        border-style: solid;
+        border-top-width: 0px;
+        border-left-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        padding-left: 5%;
+        margin-left: 7%;
+    }
+    
+    .notFoundMsg{
+        font-size: 5px;
+        color: red;
+        text-align: left;
+        margin-left: 4%;
+    }
+}
+
+

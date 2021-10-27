@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>观看订单</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="presentPopover($event)">筛选</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <p *ngIf="orderList==null||orderList.length<=0" text-center>暂无数据</p>
+  <ion-list>
+    <ion-item *ngFor="let item of orderList" (click)='viewDetail(item.commandeId)'>
+      <h2>{{item.commandeId}}<span float-right>{{item.status}}</span> </h2>
+      <p>单位:{{item.type}}<span float-right>创建日期:{{item.commandeCreateDate}}</span> </p>
+      <p>订单创建人:{{item.commandeCreator}} <span float-right>{{item.commandeTypeLabel}}</span> </p>
+      <p>最后更新时间: {{item.updateOn}}</p>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" threshold="100px">
+    <ion-infinite-scroll-content
+    loadingSpinner="bubbles"
+    loadingText="正在加载更多数据">
+    </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    
+</ion-content>

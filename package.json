@@ -1,0 +1,101 @@
+{
+  "name": "erp",
+  "version": "0.0.1",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve",
+    "serve-dev": "set npm_config_mode=dev&& ionic-app-scripts serve --dev",
+    "serve-test": "set npm_config_mode=test&& ionic-app-scripts serve --dev",
+    "serve-prod": "set npm_config_mode=prod&& ionic-app-scripts serve --prod",
+    "prepare-ios-test": "set npm_config_mode=test&& ionic cordova prepare ios ",
+    "prepare-ios-prod": "set npm_config_mode=prod&& ionic  cordova prepare ios ",
+    "prepare-android-test": "set npm_config_mode=test&& ionic cordova prepare android ",
+    "prepare-android-prod": "set npm_config_mode=prod&& ionic cordova prepare android "
+  },
+  "config": {
+    "ionic_webpack": "./src/config/webpack.config.js"
+  },
+  "dependencies": {
+    "@angular/common": "5.0.0",
+    "@angular/compiler": "5.0.0",
+    "@angular/core": "5.0.0",
+    "@angular/forms": "5.0.0",
+    "@angular/http": "5.0.0",
+    "@angular/platform-browser": "5.0.0",
+    "@angular/platform-browser-dynamic": "5.0.0",
+    "@ionic-native/app-version": "^4.20.0",
+    "@ionic-native/code-push": "^4.20.0",
+    "@ionic-native/core": "4.11.0",
+    "@ionic-native/file": "^5.20.0",
+    "@ionic-native/mobile-accessibility": "^4.20.0",
+    "@ionic-native/network": "^4.20.0",
+    "@ionic-native/splash-screen": "4.3.2",
+    "@ionic-native/status-bar": "4.3.2",
+    "@ionic/app-scripts": "^3.2.4",
+    "@ionic/storage": "^2.1.3",
+    "code-push": "^3.1.1",
+    "cordova-android": "8.1.0",
+    "cordova-ios": "^5.1.1",
+    "cordova-plugin-androidx": "^3.0.0",
+    "cordova-plugin-androidx-adapter": "^1.1.3",
+    "cordova-plugin-code-push": "^1.12.0",
+    "cordova-plugin-compat": "^1.2.0",
+    "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-dialogs": "^2.0.2",
+    "cordova-plugin-file": "^5.0.0",
+    "cordova-plugin-file-transfer": "^1.7.1",
+    "cordova-plugin-ionic-webview": "^4.1.3",
+    "cordova-plugin-jcore": "^1.3.1",
+    "cordova-plugin-splashscreen": "^4.0.3",
+    "cordova-plugin-statusbar": "^2.4.3",
+    "cordova-plugin-whitelist": "^1.3.1",
+    "cordova-plugin-zip": "^3.1.0",
+    "ionic-angular": "^3.9.2",
+    "ionic-plugin-keyboard": "^2.2.1",
+    "ionic-selectable": "^3.4.0",
+    "ionic3-jpush": "^1.2.0",
+    "ionicons": "3.0.0",
+    "phonegap-plugin-mobile-accessibility": "^1.0.5",
+    "rxjs": "5.5.11",
+    "sharp": "^0.23.4",
+    "sw-toolbox": "3.6.0",
+    "typescript": "2.4.2",
+    "zone.js": "0.8.18"
+  },
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-app-version": {},
+      "cordova-plugin-file": {},
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
+      "jpush-phonegap-plugin": {
+        "APP_KEY": "e2aa5d34daf49acee401a7cb"
+      },
+      "cordova-plugin-code-push": {},
+      "cordova-plugin-zip": {},
+      "phonegap-plugin-mobile-accessibility": {},
+      "cordova-plugin-androidx": {},
+      "cordova-plugin-androidx-adapter": {}
+    },
+    "platforms": [
+      "browser",
+      "ios",
+      "android"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+<!--
+  Generated template for the ValidationOrderListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar mode="ios" *ngIf="!readModel">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>审核订单</ion-title>
+  </ion-navbar>
+
+  <ion-navbar *ngIf="readModel">
+    <ion-title align-title="center">审核订单</ion-title>
+  </ion-navbar>
+</ion-header>
+<div *ngIf="List.length<=0&&!noData" class="spinner">
+  <ion-spinner center></ion-spinner>
+  <p text-center font-size-small>加载中...</p>
+</div>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)"> 
+    <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="下拉刷新"
+        refreshingSpinner="bubbles"
+        refreshingText="刷新..."> 
+    </ion-refresher-content>
+    <ion-refresher-content > 
+  </ion-refresher-content>
+  </ion-refresher>
+  
+  <p *ngIf="noData" text-center>暂无数据</p>
+  <div *ngFor="let item of List" padding>
+    <h6 text-center style="font-weight: bold;">{{item.commandTypeLabel}} -- {{item.statusLabel}}</h6>
+    <ion-card *ngFor="let i of item.commandDetails" (click)='showCommandDetail(i)' style="margin-left: 0px; margin-right: 0px; width: 100%;">
+      <ion-card-header> 
+       <span>订单编号: {{i.commandeId}} </span> 
+       <span float-right><ion-badge [color]='item.labelColor'>{{item.commandTypeLabel}}</ion-badge></span>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-grid style="padding-top: 0px;">
+          <ion-row inline>
+            <ion-col>修改日期 : {{i.commandeCreateDate}}</ion-col>
+          </ion-row>
+          <ion-row inline>
+            <ion-col>收取人 : {{i.receiver}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>单位 : {{i.type}}</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>订单日期 : {{i.commandeCreateDate}} </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>订单创建人 : {{i.creator}} </ion-col>
+              <ion-col>订单状态 : {{i.status}} </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
